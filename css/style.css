@@ -1,0 +1,108 @@
+@import url('https://fonts.googleapis.com/css2?family=Lexend+Deca&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&display=swap');
+
+:root {
+    --bright-orange: hsl(31, 77%, 52%);
+    --dark-cyan: hsl(184, 100%, 22%);
+    --very-dark-cyan: hsl(179, 100%, 13%);
+    --transparent-white: hsla(0, 0%, 100%, 0.75); /* (paragraphs) */
+    --very-light-gray: hsl(0, 0%, 95%); /* (background, headings, buttons) */
+}
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+body {
+    font-family: "Lexend Deca", sans-serif;
+    font-size: 15px;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+}
+.container-cards {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 90px auto;
+}
+/* cards */
+.card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    padding: 48px;
+    height: 442px;
+    width: 330px;
+}
+.card--orange {
+    background-color: var(--bright-orange);
+    border-radius: 8px 8px 0 0;
+}
+.card--cyan {
+    background-color: var(--dark-cyan);
+}
+.card--very-cyan {
+    border-radius: 0 0 8px 8px;
+    background-color: var(--very-dark-cyan);
+}
+.card__info {
+    color: var(--very-light-gray);
+}
+.card__info h3 {
+    font-family: "Big Shoulders Display", sans-serif;
+    font-size: 36px;
+    font-weight: 700;
+    margin-bottom: 38px;
+}
+/* ---------------buttons----------------- */
+.btn-rounded {
+    border: none;
+    border-radius: 30px;
+    font-size: 16px;
+    padding: 20px;
+    width: 148px;
+}
+.btn-rounded--orange {
+    color: var(--bright-orange);
+}
+.btn-rounded--orange:hover {
+    background-color: var(--bright-orange);
+    border: 2px solid var(--transparent-white);
+    color: var(--transparent-white);
+}
+.btn-rounded--cyan {
+    color: var(--dark-cyan);
+}
+.btn-rounded--cyan:hover {
+    background-color: var(--dark-cyan);
+    border: 2px solid var(--transparent-white);
+    color: var(--transparent-white);
+}
+.btn-rounded--very-cyan {
+    color: var(--very-dark-cyan);
+}
+.btn-rounded--very-cyan:hover {
+    background-color: var(--very-dark-cyan);
+    border: 2px solid var(--transparent-white);
+    color: var(--transparent-white);
+}
+/* ---------------Footer------------- */
+.attribution { font-size: 11px; text-align: center; }
+.attribution a { color: hsl(228, 45%, 44%); }
+
+/* ---------------(>1024px)----------------------- */
+@media only screen and (min-width: 1024px) {
+    .container-cards {
+        flex-direction: row;
+        justify-content: center;
+        height: 100vh;
+        margin: auto;
+    }
+    .card--orange {
+        border-radius: 8px 0 0 8px;
+    }
+    .card--very-cyan {
+        border-radius: 0 8px 8px 0;
+    }
+}
